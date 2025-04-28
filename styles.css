@@ -1,0 +1,196 @@
+/* CSS BY Ella Villacreses */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --White: #ffffff;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+    font-family: Irish Grover;
+    background-color: var(--White);
+    min-width: 428px;
+}
+
+.header {
+    background-color: var(--green);
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+}
+
+.header .tag {
+    display: block;
+    font-style: italic;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.two-boxes {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    justify-content: center;
+}
+
+.two-boxes li {
+    background-color: var(--orange);
+    color: var(--White);
+    font-weight: bold;
+    border: 1.5px solid white;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0.5rem 5rem;
+}
+
+.top {
+    list-style: none;
+}
+
+.grid {
+    font-family: Habibi;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay-text {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: var(--White);
+    background:  rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.description {
+    font-family: Habibi;
+    padding: 0 2rem;
+}
+
+[href="#top"] {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 1rem;
+    background-color: var(--orange);
+    color: var(--White);
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.75em;
+    padding: 2rem;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--green);
+    color: var(--White);
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: Irish Grover;
+}
+
+.contact {
+    list-style: none;
+    font-weight: 300;
+    font-family: Habibi;
+}
+
+.hours {
+    list-style: none;
+    font-weight: 300;
+    font-family: Habibi;
+}
+
+.copyright {
+    background-color: var(--White);
+    color: var(--green);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* MEDIA QUERY (M) */
+@media (min-width: 834px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MEDIA QUERY (L) */
+@media (min-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* MEDIA QUERY (XL) */
+@media (max-width: 1440px) {
+    .section {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+}
